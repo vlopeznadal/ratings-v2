@@ -44,6 +44,10 @@ def create_rating(user, movie, score):
 
     return rating
 
+def get_user_by_email(email):
+    """Get a user if email exists, otherwise return none"""
+    
+    return User.query.filter(User.email == email).first()
 
 if __name__ == '__main__':
     from server import app
